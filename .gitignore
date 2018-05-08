@@ -1,0 +1,5 @@
+*.pyc
+images-train
+images-val-pub
+*.clf
+*.csv

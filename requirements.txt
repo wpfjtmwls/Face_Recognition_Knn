@@ -1,0 +1,5 @@
+numpy
+dlib>=19.3.0
+scipy>=0.17.0
+face_recognition
+face_recognition_models
