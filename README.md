@@ -47,23 +47,23 @@ For further uses, you can tweak the parameters under the main function.
 For example, you can train classifier on your own models by changing the train_dir and save_path and setting n_neighbors in STEP 1. 
 
 ````bash
-    # STEP 1: Train the KNN classifier and save it to disk
-    # Once the model is trained and saved, you can skip this step next time.
-    print("KNN Classifier is being trained")
-    classifier = train("images-train", model_save_path="4780_trained_knn_model.clf", n_neighbors=1)
-    print("Traing is done. You can use the trained model to predict ur test data now. ")
+# STEP 1: Train the KNN classifier and save it to disk
+# Once the model is trained and saved, you can skip this step next time.
+print("KNN Classifier is being trained")
+classifier = train("images-train", model_save_path="4780_trained_knn_model.clf", n_neighbors=1)
+print("Traing is done. You can use the trained model to predict ur test data now. ")
 ````
 
 For prediction, you can change parameters for parameters for predict function and the location of validation/testing dir. The below part can be changed in STEP 2.
 
 ````bash
-    # STEP 2: Using the trained classifier, make predictions for unknown images
-    for image_file in os.listdir("images-val-pub"):
-        count +=1
-        if count % 100 == 0: print ("Processed {} images".format(count))
-        full_file_path = os.path.join("images-val-pub", image_file)
-        
-        predictions = predict(full_file_path, "4780_trained_knn_model.clf")
+# STEP 2: Using the trained classifier, make predictions for unknown images
+for image_file in os.listdir("images-val-pub"):
+    count +=1
+    if count % 100 == 0: print ("Processed {} images".format(count))
+    full_file_path = os.path.join("images-val-pub", image_file)
+    
+    predictions = predict(full_file_path, "4780_trained_knn_model.clf")
 ````
 
 
