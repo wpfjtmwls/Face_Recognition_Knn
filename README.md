@@ -29,6 +29,14 @@ The training/validation/testing image folder should be structured in the followi
 │   │      
 ````
 
+## Output
+
+To get an output csv file, do the following command :
+
+````bash
+python knn.py  
+````
+
 ## Output format
 
 csv file where it is formatted as : 
